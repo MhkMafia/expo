@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url("https://i.imgur.com/kTQTtrv.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    padding: 20px;
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Optional overlay for readability */
+    z-index: -1;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.section {
+    display: none;
+}
+
+.section.hidden {
+    display: none;
+}
+
+.section:not(.hidden) {
+    display: block;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
