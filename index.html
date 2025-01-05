@@ -1,75 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galactic Routes - Bus Reservation</title>
+    <title>Bus Reservation System</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <h1>Galactic Routes - Bus Reservation</h1>
+    <div class="container">
+        <h1>Bus Reservation System</h1>
 
-    <!-- Sign-in and Log-in Section -->
-    <div id="auth-section" class="section">
-        <h2>Sign In</h2>
-        <form id="sign-in-form">
-            <input type="email" id="email" placeholder="Email" required />
-            <input type="password" id="password" placeholder="Password" required />
-            <button type="submit">Sign In</button>
-        </form>
+        <!-- Authentication Section -->
+        <div id="auth-section" class="section">
+            <h2>Sign In</h2>
+            <form id="sign-in-form">
+                <input type="email" id="email" placeholder="Email" required />
+                <input type="password" id="password" placeholder="Password" required />
+                <button type="submit">Sign In</button>
+            </form>
+            <p>Don't have an account? <button id="show-sign-up">Sign Up</button></p>
+        </div>
+
+        <!-- Sign-Up Section -->
+        <div id="sign-up-section" class="section hidden">
+            <h2>Sign Up</h2>
+            <form id="sign-up-form">
+                <input type="text" id="sign-up-name" placeholder="Full Name" required />
+                <input type="email" id="sign-up-email" placeholder="Email" required />
+                <input type="password" id="sign-up-password" placeholder="Password" required />
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <button id="show-sign-in">Sign In</button></p>
+        </div>
+
+        <!-- Bus Search Section -->
+        <div id="bus-search-section" class="section hidden">
+            <h2>Search for a Bus</h2>
+            <form id="bus-search-form">
+                <input type="text" id="from-city" placeholder="From City" required />
+                <input type="text" id="to-city" placeholder="To City" required />
+                <input type="date" id="journey-date" required />
+                <select id="bus-type">
+                    <option value="all">All</option>
+                    <option value="AC">AC</option>
+                    <option value="Non-AC">Non-AC</option>
+                </select>
+                <button type="submit">Search Buses</button>
+            </form>
+            <ul id="bus-list"></ul>
+        </div>
+
+        <!-- Seat Selection Section -->
+        <div id="seat-selection-section" class="section hidden">
+            <h2>Select a Seat</h2>
+            <div id="seat-selection-grid"></div>
+            <button id="proceed-to-payment" class="hidden">Proceed</button>
+        </div>
+
+        <!-- Admin Bus Management Section -->
+        <div id="admin-section" class="section hidden">
+            <h2>Manage Buses</h2>
+            <form id="add-bus-form">
+                <input type="text" id="bus-name" placeholder="Bus Name" required />
+                <input type="text" id="from-city-admin" placeholder="From City" required />
+                <input type="text" id="to-city-admin" placeholder="To City" required />
+                <input type="date" id="journey-date-admin" required />
+                <input type="number" id="fare" placeholder="Fare" required />
+                <select id="bus-type-admin">
+                    <option value="AC">AC</option>
+                    <option value="Non-AC">Non-AC</option>
+                </select>
+                <button type="submit">Add Bus</button>
+            </form>
+        </div>
     </div>
-
-    <!-- Bus Search Section -->
-    <div id="bus-search-section" class="section hidden">
-        <h2>Find Your Bus</h2>
-        <form id="bus-search-form">
-            <input type="text" id="from-city" placeholder="From City" required />
-            <input type="text" id="to-city" placeholder="To City" required />
-            <input type="date" id="journey-date" required />
-            <button type="submit">Search Buses</button>
-        </form>
-    </div>
-
-    <!-- Bus List Section -->
-    <div id="bus-list-section" class="section hidden">
-        <h2>Available Buses</h2>
-        <ul id="bus-list"></ul>
-    </div>
-
-    <!-- Seat Selection Section -->
-    <div id="seat-selection-section" class="section hidden">
-        <h2>Select Your Seat</h2>
-        <div id="seat-selection-grid"></div>
-        <button id="proceed-to-details" class="hidden">Proceed</button>
-    </div>
-
-    <!-- Passenger Details & Payment Section -->
-    <div id="passenger-details-section" class="section hidden">
-        <h2>Passenger Details</h2>
-        <p>Seat: <span id="selected-seat"></span></p>
-        <input type="text" id="passenger-name" placeholder="Name" required />
-        <input type="email" id="passenger-email" placeholder="Email" required />
-        <input type="text" id="passenger-phone" placeholder="Phone" required />
-        <label>
-            <input type="checkbox" id="insurance-checkbox" /> Add Insurance for ₹101
-        </label>
-        <button id="proceed-to-payment">Pay ₹1500</button>
-    </div>
-
-    <!-- Confirmation Section -->
-    <div id="confirmation-section" class="section hidden">
-        <h2>Booking Confirmation</h2>
-        <p>Passenger Name: <span id="confirm-name"></span></p>
-        <p>Seat Number: <span id="confirm-seat"></span></p>
-        <p>Amount Paid: ₹<span id="confirm-amount"></span></p>
-        <p>Your booking is confirmed!</p>
-         <p>Time:-8:00 Am<\p>
-           <p>Your Pickup location is sindhi camp bus station  </p>
-    </div>
-
     <script src="scripts.js"></script>
 </body>
-
 </html>
+
