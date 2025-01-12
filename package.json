@@ -1,29 +1,24 @@
 {
-  "name": "galacticroutes-backend",
+  "name": "my-node-app",
   "version": "1.0.0",
-  "description": "Backend for GalacticRoutes bus reservation system",
-  "main": "index.js",
+  "description": "Backend for my app",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
   },
   "dependencies": {
-    "jsonwebtoken": "^8.5.1",
-    "express": "^4.18.2",
-    "mysql2": "^3.4.2",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
-    "body-parser": "^1.20.2",
-    "bcrypt": "^5.1.0",
-    "nodemailer": "^6.9.3",
-    "cors": "^2.8.5"
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^2.0.22"
   },
   "engines": {
     "node": ">=16.x"
   },
-  "keywords": [],
-  "author": "Your Name",
+  "author": "",
   "license": "ISC"
 }
