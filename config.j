@@ -17,4 +17,7 @@ db.connect(err => {
     console.log('Database connected successfully!');
 });
 
-module.exports = db;
+module.exports = {
+  secretKey: process.env.SECRET_KEY || 'mydefaultsecret',
+};
+
